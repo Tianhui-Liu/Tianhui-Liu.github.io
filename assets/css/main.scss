@@ -85,7 +85,8 @@
         }
 
         /* Publications page - allow full width */
-        &.wide .paper-box-text{
+        body.page-publications .paper-box-text,
+        .page-publications .paper-box-text{
             max-width: 100%;
         }
 

@@ -109,7 +109,7 @@ h1:before, .anchor:before {
     font-size: .8em;
 }
 
-/* Sidebar font customization */
+/* Sidebar font customization - right sidebar */
 .sidebar {
     font-family: Arial, sans-serif !important;
     text-align: center;
@@ -125,19 +125,16 @@ h1:before, .anchor:before {
 
 .author__name {
     font-family: Arial, sans-serif !important;
-    font-size: 1.6em;
     text-align: center;
 }
 
 .author__bio {
     font-family: Arial, sans-serif !important;
-    font-size: 1.2em;
     text-align: center !important;
 }
 
 .author__urls {
     font-family: Arial, sans-serif !important;
-    font-size: 1.1em;
     text-align: left !important;
 }
 
@@ -160,4 +157,17 @@ h1:before, .anchor:before {
 
 .author__urls-wrapper a {
     font-family: Arial, sans-serif !important;
+}
+
+/* Right sidebar - larger font on desktop */
+@media (min-width: 768px) {
+    .author__name {
+        font-size: 1.4em;
+    }
+    .author__bio {
+        font-size: 1.1em;
+    }
+    .author__urls {
+        font-size: 1em;
+    }
 }

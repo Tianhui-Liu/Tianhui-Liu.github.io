@@ -6,7 +6,6 @@ author_profile: true
 redirect_from:
   - /publications.html
 ---
-
 Please refer to [Google scholar](https://scholar.google.com/citations?user=xNqF7BIAAAAJ&hl=zh-CN) for full list.
 
 <div class='paper-box'><div class='paper-box-text' markdown="1">
@@ -20,6 +19,8 @@ CityRiSE: Reasoning Urban Socio-Economic Status in Vision-Language Models via Re
 </div>
 </div>
 
+
+
 <div class='paper-box'><div class='paper-box-text' markdown="1">
 
 AI Agent Behavioral Science
@@ -30,6 +31,8 @@ Lin Chen, Yunke Zhang, Jie Feng, Haoye Chai, Honglin Zhang, Bingbing Fan, Yibo M
 
 </div>
 </div>
+
+
 
 <div class='paper-box'><div class='paper-box-text' markdown="1">
 
@@ -42,6 +45,8 @@ CityLens: Evaluating Large Vision-Language Models for Urban Socioeconomic Sensin
 </div>
 </div>
 
+
+
 <div class='paper-box'><div class='paper-box-text' markdown="1">
 
 Mitigating Geospatial Knowledge Hallucination in Large Language Models: Benchmarking and Dynamic Factuality Aligning
@@ -52,6 +57,8 @@ Shengyuan Wang, Jie Feng, **Tianhui Liu**, Dan Pei, Yong Li
 
 </div>
 </div>
+
+
 
 <div class='paper-box'><div class='paper-box-text' markdown="1">
 
@@ -64,6 +71,8 @@ Jie Feng, Shengyuan Wang, **Tianhui Liu**, Yanxin Xi, Yong Li
 </div>
 </div>
 
+
+
 <div class='paper-box'><div class='paper-box-text' markdown="1">
 
 CityBench: Evaluating the Capabilities of Large Language Models for Urban Tasks
@@ -74,6 +83,8 @@ Jie Feng\*, Jun Zhang\*, **Tianhui Liu\***, Xin Zhang, Tianjian Ouyang, Junbo Ya
 
 </div>
 </div>
+
+
 
 <div class='paper-box'><div class='paper-box-text' markdown="1">
 
@@ -86,16 +97,19 @@ Jie Feng\*, **Tianhui Liu\***, Yuwei Du, Siqi Guo, Yuming Lin, Yong Li
 </div>
 </div>
 
+
+
 <div class='paper-box'><div class='paper-box-text' markdown="1">
 
 Encoded Marker Clusters for Auto-Labeling in Optical Motion Capture
 
 Hao Wang, Taogang Hou, **Tianhui Liu**, Jiaxin Li, Tianmiao Wang
 
-**ACM Transactions on Graphics (TOG)** 2025
+**ACM Transactions on Graphics (TOG)** 
 
 </div>
 </div>
+
 
 <div class='paper-box'><div class='paper-box-text' markdown="1">
 
@@ -103,10 +117,10 @@ A Spiral Coverage Path Planning Algorithm for Nonomnidirectional Robots
 
 Taogang Hou, Jiaxin Li, Xuan Pei, Hao Wang, **Tianhui Liu**
 
-**Journal of Field Robotics** 2025
+**Journal of Field Robotics** 
 
 </div>
 </div>
+
 
 \* indicates equal contribution.
-

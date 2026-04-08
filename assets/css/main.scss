@@ -108,3 +108,23 @@ h1:before, .anchor:before {
     background-color: #00369f;
     font-size: .8em;
 }
+
+/* Sidebar font customization */
+.sidebar {
+    font-family: Arial, sans-serif;
+}
+
+.author__name {
+    font-family: Arial, sans-serif;
+    font-size: 1.4em;
+}
+
+.author__bio {
+    font-family: Arial, sans-serif;
+    font-size: 1.1em;
+}
+
+.author__urls {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}

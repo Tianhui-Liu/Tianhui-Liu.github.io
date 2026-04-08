@@ -10,7 +10,7 @@ classes: wide
 ---
 Please refer to [Google scholar](https://scholar.google.com/citations?user=xNqF7BIAAAAJ&hl=zh-CN) for full list.
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+<div class='paper-box paper-box-publications'><div class='paper-box-text' markdown="1">
 
 **CityRiSE: Reasoning Urban Socio-Economic Status in Vision-Language Models via Reinforcement Learning**
 
@@ -22,7 +22,7 @@ Please refer to [Google scholar](https://scholar.google.com/citations?user=xNqF7
 </div>
 
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+<div class='paper-box paper-box-publications'><div class='paper-box-text' markdown="1">
 
 **AI Agent Behavioral Science**
 
@@ -34,7 +34,7 @@ Lin Chen, Yunke Zhang, Jie Feng, Haoye Chai, Honglin Zhang, Bingbing Fan, Yibo M
 </div>
 
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+<div class='paper-box paper-box-publications'><div class='paper-box-text' markdown="1">
 
 **CityLens: Evaluating Large Vision-Language Models for Urban Socioeconomic Sensing**
 
@@ -47,7 +47,7 @@ Lin Chen, Yunke Zhang, Jie Feng, Haoye Chai, Honglin Zhang, Bingbing Fan, Yibo M
 
 
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+<div class='paper-box paper-box-publications'><div class='paper-box-text' markdown="1">
 
 **Mitigating Geospatial Knowledge Hallucination in Large Language Models: Benchmarking and Dynamic Factuality Aligning**
 
@@ -59,7 +59,7 @@ Shengyuan Wang, Jie Feng, **Tianhui Liu**, Dan Pei, Yong Li
 </div>
 
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+<div class='paper-box paper-box-publications'><div class='paper-box-text' markdown="1">
 
 **UrbanLLaVA: A Multi-modal Large Language Model for Urban Intelligence**
 
@@ -71,7 +71,7 @@ Jie Feng, Shengyuan Wang, **Tianhui Liu**, Yanxin Xi, Yong Li
 </div>
 
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+<div class='paper-box paper-box-publications'><div class='paper-box-text' markdown="1">
 
 **CityBench: Evaluating the Capabilities of Large Language Models for Urban Tasks**
 
@@ -83,7 +83,7 @@ Jie Feng\*, Jun Zhang\*, **Tianhui Liu\***, Xin Zhang, Tianjian Ouyang, Junbo Ya
 </div>
 
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+<div class='paper-box paper-box-publications'><div class='paper-box-text' markdown="1">
 
 **CityGPT: Empowering Urban Spatial Cognition of Large Language Models**
 
@@ -95,7 +95,7 @@ Jie Feng\*, **Tianhui Liu\***, Yuwei Du, Siqi Guo, Yuming Lin, Yong Li
 </div>
 
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+<div class='paper-box paper-box-publications'><div class='paper-box-text' markdown="1">
 
 **Encoded Marker Clusters for Auto-Labeling in Optical Motion Capture**
 
@@ -107,7 +107,7 @@ Hao Wang, Taogang Hou, **Tianhui Liu**, Jiaxin Li, Tianmiao Wang
 </div>
 
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+<div class='paper-box paper-box-publications'><div class='paper-box-text' markdown="1">
 
 **A Spiral Coverage Path Planning Algorithm for Nonomnidirectional Robots**
 

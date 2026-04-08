@@ -1,5 +1,9 @@
 {% if page.author and site.data.authors[page.author] %}
-  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+  {% assign author = site.data.authors[page.author] %}
+{% elsif site.author %}
+  {% assign author = site.author %}
+{% else %}
+  {% assign author = site.data.authors.tianhui %}
 {% endif %}
 
 <div itemscope itemtype="http://schema.org/Person" class="profile_box">

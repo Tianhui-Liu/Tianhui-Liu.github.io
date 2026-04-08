@@ -130,12 +130,12 @@ h1:before, .anchor:before {
 }
 
 .author__bio {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif !important;
     font-size: 1.1em;
-    text-align: center;
+    text-align: left;
 }
 
 .author__urls {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif !important;
     font-size: 1em;
 }

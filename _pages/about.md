@@ -29,6 +29,8 @@ My research centers on **spatial intelligence** empowered by **large vision-lang
 
 # 📝 Selected Publications
 
+<span id="publications"></span>
+
 Please refer to [Google scholar](https://scholar.google.com/citations?user=xNqF7BIAAAAJ&hl=zh-CN) for full list.
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/citylens-framework.png' alt="CityLens Framework" width="100%"></div></div>
@@ -58,6 +60,7 @@ Jie Feng\*, Jun Zhang\*, **Tianhui Liu\***, Xin Zhang, Tianjian Ouyang, Junbo Ya
 </div>
 
 
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">KDD 2025 Research</div><img src='images/citygpt-framework.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -66,6 +69,9 @@ Jie Feng\*, Jun Zhang\*, **Tianhui Liu\***, Xin Zhang, Tianjian Ouyang, Junbo Ya
 Jie Feng*, **Tianhui Liu\***, Yuwei Du, Siqi Guo, Yuming Lin, Yong Li
 
 [**Codes**](https://github.com/tsinghua-fib-lab/CityGPT) / [**PDF**](https://arxiv.org/abs/2406.13948)
+
+</div>
+</div>
 
 
 # 🎖 Honors and Awards

@@ -112,16 +112,27 @@ h1:before, .anchor:before {
 /* Sidebar font customization */
 .sidebar {
     font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.author__avatar {
+    text-align: center;
+}
+
+.author__avatar img {
+    margin: 0 auto;
 }
 
 .author__name {
     font-family: Arial, sans-serif;
     font-size: 1.4em;
+    text-align: center;
 }
 
 .author__bio {
     font-family: Arial, sans-serif;
     font-size: 1.1em;
+    text-align: center;
 }
 
 .author__urls {

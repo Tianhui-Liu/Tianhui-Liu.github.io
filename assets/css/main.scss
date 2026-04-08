@@ -125,23 +125,25 @@ h1:before, .anchor:before {
 
 .author__name {
     font-family: Arial, sans-serif !important;
-    font-size: 1.4em;
+    font-size: 1.6em;
     text-align: center;
 }
 
 .author__bio {
     font-family: Arial, sans-serif !important;
-    font-size: 1.1em;
-    text-align: left !important;
+    font-size: 1.2em;
+    text-align: center !important;
 }
 
 .author__urls {
     font-family: Arial, sans-serif !important;
-    font-size: 1em;
+    font-size: 1.1em;
+    text-align: left !important;
 }
 
 .author__urls-wrapper {
     font-family: Arial, sans-serif !important;
+    text-align: left !important;
 }
 
 .author__urls li {
@@ -153,5 +155,9 @@ h1:before, .anchor:before {
 }
 
 .sidebar .author__name {
+    font-family: Arial, sans-serif !important;
+}
+
+.author__urls-wrapper a {
     font-family: Arial, sans-serif !important;
 }

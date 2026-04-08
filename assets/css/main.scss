@@ -159,15 +159,15 @@ h1:before, .anchor:before {
     font-family: Arial, sans-serif !important;
 }
 
-/* Right sidebar - larger font on desktop */
-@media (min-width: 768px) {
-    .author__name {
-        font-size: 1.4em;
-    }
-    .author__bio {
-        font-size: 1.1em;
-    }
-    .author__urls {
-        font-size: 1em;
-    }
+/* Main content - larger font */
+.page__content {
+    font-size: 1.1em;
+}
+
+.page__content p {
+    font-size: 1.1em;
+}
+
+.page__content li {
+    font-size: 1.1em;
 }

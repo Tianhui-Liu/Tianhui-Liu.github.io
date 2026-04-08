@@ -80,8 +80,13 @@
         .paper-box-text{
             justify-content: left;
             padding-left: 2em;
-            max-width: 100%;
+            max-width: 60%;
             order: 2;
+        }
+
+        /* Publications page - allow full width */
+        &.wide .paper-box-text{
+            max-width: 100%;
         }
 
     }

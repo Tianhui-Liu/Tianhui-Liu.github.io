@@ -5,6 +5,8 @@ excerpt: ""
 author_profile: true
 redirect_from:
   - /publications.html
+layout: page
+classes: wide
 ---
 Please refer to [Google scholar](https://scholar.google.com/citations?user=xNqF7BIAAAAJ&hl=zh-CN) for full list.
 

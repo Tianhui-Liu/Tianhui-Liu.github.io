@@ -47,7 +47,7 @@ Please refer to [Google scholar](https://scholar.google.com/citations?user=xNqF7
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">KDD 2025 D&B</div><img src='images/citybench-framework.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">KDD 2025 D&B</div><img src='images/citybench-Framework.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **CityBench: Evaluating the Capabilities of Large Language Models for Urban Tasks**

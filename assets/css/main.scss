@@ -49,7 +49,7 @@
     border-bottom: 1px #efefef solid;
     padding: 3em 0 3em 0;
     margin-bottom: 1em;
-    
+
 
     .paper-box-image{
         justify-content: center;
@@ -62,13 +62,13 @@
             object-fit: cover;
         }
     }
-    
+
     .paper-box-text{
         max-width: 100%;
         order: 1;
         width: 100%;
     }
-    
+
     @media (min-width: 768px) {
         .paper-box-image{
             justify-content: left;
@@ -81,12 +81,8 @@
             justify-content: left;
             padding-left: 2em;
             max-width: 60%;
+            width: 60%;
             order: 2;
-        }
-
-        /* Publications page - allow full width */
-        .paper-box-publications .paper-box-text{
-            max-width: 100%;
         }
 
     }
@@ -94,13 +90,41 @@
 
 }
 
+/* Publications page - allow full width */
+.paper-box-publications .paper-box-text {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Override theme layout for publications page */
+body[class*="publications"] {
+    #main,
+    .page__content,
+    .page,
+    .page__inner-wrap,
+    .layout--page,
+    article.page {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    article.page {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
 $scroll_offset : 2em;
-h1:before, .anchor:before { 
-    content: ''; 
-    display: block; 
-    position: relative; 
-    width: 0; 
-    height: $scroll_offset; 
+h1:before, .anchor:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+    height: $scroll_offset;
     margin-top: -$scroll_offset;
 }
 
@@ -116,8 +140,21 @@ h1:before, .anchor:before {
 }
 
 /* Sidebar font customization - right sidebar */
+$sidebar-font: Arial, sans-serif !important;
+
+.sidebar,
+.author__name,
+.author__bio,
+.author__urls,
+.author__urls-wrapper,
+.author__urls li,
+.profile_box,
+.sidebar .author__name,
+.author__urls-wrapper a {
+    font-family: $sidebar-font;
+}
+
 .sidebar {
-    font-family: Arial, sans-serif !important;
     text-align: center;
 }
 
@@ -129,40 +166,18 @@ h1:before, .anchor:before {
     margin: 0 auto;
 }
 
-.author__name {
-    font-family: Arial, sans-serif !important;
+.author__name,
+.author__bio {
     text-align: center;
 }
 
 .author__bio {
-    font-family: Arial, sans-serif !important;
     text-align: center !important;
 }
 
-.author__urls {
-    font-family: Arial, sans-serif !important;
-    text-align: left !important;
-}
-
+.author__urls,
 .author__urls-wrapper {
-    font-family: Arial, sans-serif !important;
     text-align: left !important;
-}
-
-.author__urls li {
-    font-family: Arial, sans-serif !important;
-}
-
-.profile_box {
-    font-family: Arial, sans-serif !important;
-}
-
-.sidebar .author__name {
-    font-family: Arial, sans-serif !important;
-}
-
-.author__urls-wrapper a {
-    font-family: Arial, sans-serif !important;
 }
 
 /* Main content - larger font */

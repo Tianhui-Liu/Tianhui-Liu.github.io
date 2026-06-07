@@ -154,13 +154,17 @@ a {
   text-transform: uppercase;
 }
 
-.hero h1 {
+.hero-title {
   margin: 0;
-  max-width: 980px;
-  font-size: clamp(1.72rem, 3.2vw, 2.75rem);
-  line-height: 1.14;
+  width: 100%;
+  max-width: 1120px;
+  font-size: clamp(1.4rem, 2.35vw, 2.1rem);
+  line-height: 1.16;
   letter-spacing: 0;
-  text-wrap: balance;
+}
+
+.hero-title-line {
+  display: block;
 }
 
 .subtitle {
@@ -172,12 +176,13 @@ a {
 }
 
 .authors {
-  max-width: 1040px;
+  width: 100%;
+  max-width: 1120px;
   margin: 24px auto 0;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 0.94rem;
+  font-size: clamp(0.78rem, 1.15vw, 0.92rem);
   font-weight: 760;
-  line-height: 1.5;
+  line-height: 1.35;
   white-space: nowrap;
 }
 
@@ -196,6 +201,7 @@ a {
 
 .affiliation-row {
   display: block;
+  width: 100%;
 }
 
 .corresponding-note {
@@ -720,8 +726,8 @@ a {
 }
 
 @media (max-width: 620px) {
-  .hero h1 {
-    font-size: 1.58rem;
+  .hero-title {
+    font-size: 1.36rem;
   }
 
   .metric-grid,

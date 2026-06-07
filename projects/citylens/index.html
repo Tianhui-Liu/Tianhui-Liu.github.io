@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CityLens is an ICLR 2026 benchmark for evaluating large vision-language models on urban socioeconomic sensing from satellite and street view imagery."
+    />
+    <title>CityLens | Urban Socioeconomic Sensing with LVLMs</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="CityLens navigation">
+      <a class="brand" href="#top" aria-label="CityLens home">
+        <span class="brand-mark">CL</span>
+        <span>CityLens</span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#abstract">Abstract</a>
+        <a href="#benchmark">Benchmark</a>
+        <a href="#methods">Methods</a>
+        <a href="#poster">Poster</a>
+        <a href="#figures">Figures</a>
+        <a href="#findings">Findings</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="CityLens overview">
+        <div class="hero-content">
+          <p class="kicker">ICLR 2026 Conference Paper</p>
+          <h1>CityLens</h1>
+          <p class="subtitle">
+            Evaluating large vision-language models for urban socioeconomic sensing.
+          </p>
+          <p class="authors">
+            Tianhui Liu, Hetian Pang, Xin Zhang, Tianjian Ouyang, Zhiyuan Zhang,
+            Jie Feng, Pan Hui, and Yong Li
+          </p>
+          <p class="hero-copy">
+            CityLens asks whether LVLMs can move from seeing cities to estimating their
+            socioeconomic conditions, using satellite and street view imagery across global urban regions.
+          </p>
+          <div class="hero-actions" aria-label="Primary resources">
+            <a class="button button-secondary" href="./assets/citylens-paper.pdf">Paper PDF</a>
+            <a class="button button-secondary" href="https://github.com/tsinghua-fib-lab/CityLens">Code</a>
+            <a class="button button-secondary" href="https://github.com/tsinghua-fib-lab/CityLens">Data</a>
+            <a class="button button-secondary" href="#poster">Poster</a>
+          </div>
+        </div>
+        <dl class="hero-stats" aria-label="Benchmark scale">
+          <div>
+            <dt>17</dt>
+            <dd>Cities</dd>
+          </div>
+          <div>
+            <dt>11</dt>
+            <dd>Indicators</dd>
+          </div>
+          <div>
+            <dt>6</dt>
+            <dd>Domains</dd>
+          </div>
+          <div>
+            <dt>17</dt>
+            <dd>LVLMs</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="abstract" class="intro-band">
+        <div class="intro-layout">
+          <div>
+            <p class="section-label">Abstract</p>
+            <h2>Urban AI needs benchmarks that measure more than scene recognition.</h2>
+          </div>
+          <p>
+            CityLens is a comprehensive benchmark for evaluating whether large vision-language
+            models can predict socioeconomic indicators from satellite and street view imagery.
+            It covers 17 globally distributed cities, 11 prediction tasks, and 6 domains:
+            economy, education, crime, transport, health, and environment. The benchmark
+            evaluates 17 state-of-the-art LVLMs under three paradigms, revealing both promising
+            perceptual capabilities and persistent limitations in numerical grounding, cross-city
+            generalization, and abstract socioeconomic inference.
+          </p>
+        </div>
+      </section>
+
+      <section id="benchmark" class="section">
+        <div class="section-heading">
+          <p class="section-label">Benchmark</p>
+          <h2>A multi-modal, multi-city benchmark for socioeconomic sensing.</h2>
+          <p>
+            Each evaluation region is represented by one satellite image, ten street view images,
+            and a scalar socioeconomic label. The benchmark spans global and country-specific tasks,
+            with geographic units aligned to satellite areas, census tracts, or MSOAs.
+          </p>
+        </div>
+
+        <div class="metric-grid" aria-label="CityLens benchmark summary">
+          <article class="metric-tile">
+            <span>Coverage</span>
+            <strong>17 global cities</strong>
+            <p>Including cities across North America, Europe, Asia, Africa, South America, and Oceania.</p>
+          </article>
+          <article class="metric-tile">
+            <span>Signals</span>
+            <strong>6 domains</strong>
+            <p>Economy, education, crime, transport, health, and environment.</p>
+          </article>
+          <article class="metric-tile">
+            <span>Tasks</span>
+            <strong>11 indicators</strong>
+            <p>GDP, population, house price, public transport, drive ratio, mental health, and more.</p>
+          </article>
+          <article class="metric-tile">
+            <span>Models</span>
+            <strong>17 LVLMs</strong>
+            <p>Open and proprietary systems are evaluated under the same task definitions.</p>
+          </article>
+        </div>
+
+        <figure class="content-figure">
+          <a href="./assets/images/framework.png" aria-label="Open CityLens framework figure">
+            <img src="./assets/images/framework.png" alt="CityLens framework: satellite and street view imagery are used for socioeconomic prediction across domains, cities, models, and evaluation methods" />
+          </a>
+          <figcaption>CityLens framework: region-level visual inputs, socioeconomic prediction tasks, and benchmark scale.</figcaption>
+        </figure>
+
+        <div class="indicator-panel">
+          <div>
+            <p class="section-label">Indicators</p>
+            <h3>Eleven prediction tasks across six urban domains.</h3>
+          </div>
+          <div class="indicator-list" aria-label="CityLens indicators">
+            <span>GDP</span>
+            <span>Population</span>
+            <span>House Price</span>
+            <span>Public Transport</span>
+            <span>Drive Ratio</span>
+            <span>Mental Health</span>
+            <span>Accessibility to Healthcare</span>
+            <span>Life Expectancy</span>
+            <span>Bachelor Ratio</span>
+            <span>Violent Crime</span>
+            <span>Building Height</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="methods" class="section methods-section">
+        <div class="section-heading">
+          <p class="section-label">Evaluation Paradigms</p>
+          <h2>Three ways to test what LVLMs can actually do.</h2>
+          <p>
+            CityLens separates direct numeric prediction, relative normalized estimation, and
+            feature-based regression so that perception, ranking, and numeric grounding can be analyzed independently.
+          </p>
+        </div>
+
+        <figure class="content-figure">
+          <a href="./assets/images/pipeline.png" aria-label="Open CityLens pipeline figure">
+            <img src="./assets/images/pipeline.png" alt="CityLens benchmark construction pipeline: data collection, indicator selection, data mapping, and evaluation methods" />
+          </a>
+          <figcaption>Benchmark construction pipeline: data collection, indicator selection, spatial mapping, and evaluation methods.</figcaption>
+        </figure>
+
+        <div class="method-grid">
+          <article class="method-card">
+            <span class="method-index">01</span>
+            <h3>Direct Metric Prediction</h3>
+            <p>
+              The model receives urban imagery and directly outputs a specific socioeconomic value,
+              such as the public transit ratio or average house price for a region.
+            </p>
+          </article>
+          <article class="method-card">
+            <span class="method-index">02</span>
+            <h3>Normalized Metric Estimation</h3>
+            <p>
+              The target is converted to a 0.0 to 9.9 scale, emphasizing relative ordering and
+              reducing the burden of absolute value calibration.
+            </p>
+          </article>
+          <article class="method-card">
+            <span class="method-index">03</span>
+            <h3>Feature-Based Regression</h3>
+            <p>
+              LVLMs score structured visual features, then a regression model maps those features to
+              socioeconomic indicators, turning the LVLM into a visual feature enhancer.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="poster" class="section poster-section">
+        <div class="section-heading">
+          <p class="section-label">Poster</p>
+          <h2>Conference poster.</h2>
+          <p>
+            A single poster preview keeps the project page focused while preserving the full
+            conference presentation artifact.
+          </p>
+        </div>
+        <figure class="poster-preview">
+          <a href="./assets/images/citylens-poster.png" aria-label="Open CityLens poster image">
+            <img src="./assets/images/citylens-poster.png" alt="CityLens conference poster" />
+          </a>
+          <figcaption>
+            <a class="button button-dark" href="./assets/images/citylens-poster.png">Open Poster</a>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="figures" class="section figures-section">
+        <div class="section-heading">
+          <p class="section-label">Figures</p>
+          <h2>Browse paper figures.</h2>
+          <p>
+            The gallery collects paper figures in one compact browser instead of placing each
+            result separately throughout the page.
+          </p>
+        </div>
+        <div class="figure-gallery" data-gallery tabindex="0">
+          <div class="gallery-stage">
+            <button class="gallery-arrow" type="button" data-gallery-prev aria-label="Previous figure">&#8249;</button>
+            <a class="gallery-image-link" data-gallery-link href="#figures" hidden>
+              <img data-gallery-image alt="CityLens figure" />
+            </a>
+            <button class="gallery-arrow" type="button" data-gallery-next aria-label="Next figure">&#8250;</button>
+          </div>
+          <div class="gallery-meta">
+            <div>
+              <p class="gallery-count" data-gallery-count>0 / 0</p>
+              <h3 data-gallery-title>No figures added yet</h3>
+            </div>
+            <a class="button button-light" data-gallery-open href="#figures" hidden>Open Figure</a>
+          </div>
+          <div class="gallery-thumbs" data-gallery-thumbs aria-label="Figure thumbnails"></div>
+          <div class="gallery-empty" data-gallery-empty hidden>
+            Put the figures you want to browse into <code>assets/images/</code>, then add them to <code>assets/figures.js</code>.
+          </div>
+        </div>
+      </section>
+
+      <section id="findings" class="section findings-section">
+        <div class="section-heading">
+          <p class="section-label">Findings</p>
+          <h2>Current LVLMs see useful urban cues, but still struggle to quantify society.</h2>
+          <p>
+            CityLens reveals that visual grounding, model architecture, task design, and data coverage
+            all matter. Larger models are not automatically better, and visually grounded indicators are
+            far easier than latent social outcomes.
+          </p>
+        </div>
+
+        <div class="finding-layout">
+          <article class="finding">
+            <h3>Observable tasks perform better.</h3>
+            <p>
+              Building Height, Public Transport, and GDP show stronger results because their signals
+              are more visually tied to skyline structure, transit infrastructure, and urban morphology.
+            </p>
+          </article>
+          <article class="finding">
+            <h3>Abstract indicators remain hard.</h3>
+            <p>
+              Mental Health, Life Expectancy, and Bachelor Ratio depend on latent social and health
+              mechanisms that are not cleanly visible in street or satellite imagery.
+            </p>
+          </article>
+          <article class="finding">
+            <h3>Street views are especially valuable.</h3>
+            <p>
+              Ground-level imagery provides dense semantic cues such as building facades, signage,
+              road quality, and public infrastructure. More street views tend to improve performance.
+            </p>
+          </article>
+          <article class="finding">
+            <h3>Geographic gaps are measurable.</h3>
+            <p>
+              The GDP bias audit reports stronger performance for Global North cities
+              (R<sup>2</sup> 0.399, nRMSE 0.787) than Global South cities
+              (R<sup>2</sup> 0.168, nRMSE 0.869).
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section implications-section">
+        <div class="split-layout">
+          <div>
+            <p class="section-label">Takeaway</p>
+            <h2>CityLens is not just a leaderboard. It is a diagnostic lens.</h2>
+          </div>
+          <div class="takeaway-copy">
+            <p>
+              The benchmark makes it possible to ask sharper questions: Which indicators are
+              visually observable? Which models extract stable urban concepts? When should LVLMs
+              predict directly, estimate normalized scores, or provide structured visual features?
+            </p>
+            <p>
+              By exposing failure modes across cities, modalities, and socioeconomic domains,
+              CityLens turns urban visual intelligence into a measurable research problem.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="resources" class="section resources-section">
+        <div class="section-heading">
+          <p class="section-label">Resources</p>
+          <h2>Explore the paper, code, dataset, and citation.</h2>
+        </div>
+        <div class="resource-row">
+          <a class="resource-link" href="https://github.com/tsinghua-fib-lab/CityLens">
+            <span>GitHub Repository</span>
+            <strong>github.com/tsinghua-fib-lab/CityLens</strong>
+          </a>
+          <a class="resource-link" href="./assets/citylens-paper.pdf">
+            <span>Paper PDF</span>
+            <strong>Download local copy</strong>
+          </a>
+          <a class="resource-link" href="#poster">
+            <span>Poster</span>
+            <strong>Open conference poster</strong>
+          </a>
+          <a class="resource-link" href="#figures">
+            <span>Figures</span>
+            <strong>Browse gallery</strong>
+          </a>
+        </div>
+        <p class="citation">
+          Tianhui Liu, Hetian Pang, Xin Zhang, Tianjian Ouyang, Zhiyuan Zhang, Jie Feng,
+          Pan Hui, and Yong Li. <em>CityLens: Evaluating Large Vision-Language Models for
+          Urban Socioeconomic Sensing.</em> ICLR 2026.
+        </p>
+        <pre class="bibtex"><code>@inproceedings{liu2026citylens,
+  title={CityLens: Evaluating Large Vision-Language Models for Urban Socioeconomic Sensing},
+  author={Liu, Tianhui and Pang, Hetian and Zhang, Xin and Ouyang, Tianjian and Zhang, Zhiyuan and Feng, Jie and Hui, Pan and Li, Yong},
+  booktitle={International Conference on Learning Representations},
+  year={2026}
+}</code></pre>
+      </section>
+    </main>
+    <script type="module" src="./assets/gallery.js"></script>
+  </body>
+</html>

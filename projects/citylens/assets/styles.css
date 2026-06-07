@@ -277,7 +277,7 @@ a {
 }
 
 .intro-layout {
-  max-width: 920px;
+  max-width: 1060px;
   padding: clamp(54px, 8vw, 94px) 0;
   text-align: center;
 }
@@ -298,6 +298,8 @@ a {
 
 .abstract-copy {
   margin: 16px 0 0;
+  font-size: 1.16rem;
+  line-height: 1.62;
 }
 
 .section {
@@ -318,10 +320,17 @@ a {
   max-width: 1060px;
 }
 
-.benchmark-heading p {
+.benchmark-heading p,
+.methods-section .section-heading p,
+.citation {
   max-width: 1060px;
   font-size: 1.16rem;
   line-height: 1.62;
+}
+
+.methods-section .section-heading,
+.citation-section .section-heading {
+  max-width: 1060px;
 }
 
 .metric-grid,
@@ -363,7 +372,8 @@ a {
 }
 
 .content-figure {
-  margin: clamp(28px, 5vw, 52px) 0 0;
+  width: min(900px, 100%);
+  margin: clamp(28px, 5vw, 52px) auto 0;
   overflow: visible;
   background: transparent;
   box-shadow: none;
@@ -597,7 +607,7 @@ a {
 }
 
 .citation {
-  max-width: 900px;
+  max-width: 1060px;
   margin-top: 18px;
 }
 

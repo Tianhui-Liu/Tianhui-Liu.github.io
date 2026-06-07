@@ -70,8 +70,7 @@ a {
 .brand,
 .nav-links,
 .hero-actions,
-.hero-stats,
-.resource-row {
+.hero-stats {
   display: flex;
   align-items: center;
 }
@@ -112,11 +111,12 @@ a {
 
 .hero {
   position: relative;
-  display: grid;
+  display: flex;
   min-height: 92svh;
-  align-items: end;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  padding: 124px clamp(18px, 5vw, 72px) 34px;
+  padding: 124px clamp(18px, 5vw, 72px) 56px;
   color: var(--white);
   background:
     linear-gradient(135deg, rgba(11, 111, 104, 0.24), transparent 42%),
@@ -124,17 +124,23 @@ a {
     var(--night);
 }
 
-.hero-content {
+.hero-shell {
   position: relative;
   z-index: 1;
-  width: min(780px, 100%);
-  padding-bottom: clamp(28px, 5vh, 64px);
+  display: grid;
+  gap: 30px;
+  width: min(1100px, 100%);
+  justify-items: center;
+}
+
+.hero-content {
+  width: min(960px, 100%);
+  text-align: center;
 }
 
 .kicker,
 .section-label,
-.metric-tile span,
-.resource-link span {
+.metric-tile span {
   margin: 0;
   color: var(--gold);
   font-size: 0.78rem;
@@ -144,9 +150,9 @@ a {
 }
 
 .hero h1 {
-  margin: 8px 0 0;
-  font-size: clamp(4rem, 12vw, 9.2rem);
-  line-height: 0.88;
+  margin: 0;
+  font-size: clamp(2.55rem, 6vw, 5.15rem);
+  line-height: 1;
   letter-spacing: 0;
 }
 
@@ -158,23 +164,41 @@ a {
   max-width: 760px;
 }
 
-.hero-copy {
-  max-width: 660px;
-  margin: 18px 0 0;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: clamp(1rem, 1.6vw, 1.16rem);
+.authors {
+  max-width: 900px;
+  margin: 24px auto 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.08rem;
+  font-weight: 760;
+  line-height: 1.7;
 }
 
-.authors {
-  max-width: 780px;
-  margin: 18px 0 0;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 0.98rem;
-  font-weight: 760;
+.affiliations,
+.corresponding-note {
+  margin: 16px auto 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.affiliations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  max-width: 940px;
+  font-size: 0.95rem;
+}
+
+.affiliations span {
+  display: inline-block;
+}
+
+.corresponding-note {
+  font-size: 0.9rem;
 }
 
 .hero-actions {
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
   margin-top: 30px;
 }
@@ -232,8 +256,8 @@ a {
 
 .hero-stats {
   position: relative;
-  z-index: 2;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   width: min(980px, 100%);
   margin: 0;
@@ -268,33 +292,33 @@ a {
 }
 
 .intro-layout,
-.section,
-.split-layout {
+.section {
   width: min(1180px, calc(100% - 36px));
   margin: 0 auto;
 }
 
 .intro-layout {
-  display: grid;
-  grid-template-columns: minmax(240px, 0.9fr) minmax(280px, 1.15fr);
-  gap: clamp(28px, 5vw, 72px);
+  max-width: 920px;
   padding: clamp(54px, 8vw, 94px) 0;
+  text-align: center;
 }
 
 .intro-layout h2,
-.section-heading h2,
-.split-layout h2 {
+.section-heading h2 {
   margin: 10px 0 0;
-  font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 1.03;
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+  line-height: 1.08;
   letter-spacing: 0;
 }
 
 .intro-layout p:last-child,
-.section-heading p,
-.takeaway-copy {
+.section-heading p {
   color: var(--muted);
   font-size: 1.05rem;
+}
+
+.abstract-copy {
+  margin: 16px 0 0;
 }
 
 .section {
@@ -302,12 +326,13 @@ a {
 }
 
 .section-heading {
+  margin: 0 auto clamp(28px, 5vw, 54px);
   max-width: 840px;
-  margin-bottom: clamp(28px, 5vw, 54px);
+  text-align: center;
 }
 
 .section-heading p {
-  margin: 18px 0 0;
+  margin: 18px auto 0;
 }
 
 .metric-grid,
@@ -353,24 +378,22 @@ a {
 
 .content-figure {
   margin: clamp(28px, 5vw, 52px) 0 0;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--white);
-  box-shadow: var(--shadow);
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
 }
 
 .content-figure img {
   width: 100%;
-  background: var(--white);
+  background: transparent;
+  border-radius: var(--radius);
 }
 
 .content-figure figcaption {
-  border-top: 1px solid var(--line);
-  padding: 12px 16px;
+  padding: 14px 4px 0;
   color: var(--muted);
-  background: var(--white);
   font-size: 0.92rem;
+  text-align: center;
 }
 
 .indicator-panel {
@@ -412,7 +435,7 @@ a {
   max-width: none;
   border-block: 1px solid var(--line);
   padding-inline: max(18px, calc((100% - 1180px) / 2));
-  background: #f5f1ea;
+  background: #f4f0e8;
 }
 
 .methods-section .section-heading,
@@ -621,67 +644,14 @@ a {
   background: var(--mist);
 }
 
-.implications-section {
-  width: 100%;
-  max-width: none;
-  color: var(--white);
-  background:
-    linear-gradient(135deg, rgba(11, 111, 104, 0.18), transparent 48%),
-    var(--night);
-}
-
-.split-layout {
-  display: grid;
-  grid-template-columns: minmax(240px, 0.9fr) minmax(280px, 1.1fr);
-  gap: clamp(28px, 5vw, 72px);
-}
-
-.split-layout h2,
-.takeaway-copy {
-  color: var(--white);
-}
-
-.takeaway-copy p {
-  margin: 0;
-}
-
-.takeaway-copy p + p {
-  margin-top: 18px;
-}
-
-.resources-section {
+.citation-section {
+  border-top: 1px solid var(--line);
   padding-bottom: clamp(48px, 7vw, 86px);
 }
 
-.resource-row {
-  align-items: stretch;
-  gap: 14px;
-}
-
-.resource-link {
-  flex: 1 1 280px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 20px;
-  background: var(--white);
-  text-decoration: none;
-  box-shadow: 0 16px 45px rgba(16, 32, 34, 0.06);
-}
-
-.resource-link:hover {
-  border-color: var(--teal);
-}
-
-.resource-link strong {
-  display: block;
-  margin-top: 8px;
-  font-size: 1.08rem;
-  overflow-wrap: anywhere;
-}
-
 .citation {
-  max-width: 980px;
-  margin-top: 28px;
+  max-width: 900px;
+  margin-top: 18px;
 }
 
 .bibtex {
@@ -719,8 +689,7 @@ a {
     padding-top: 106px;
   }
 
-  .hero-stats,
-  .resource-row {
+  .hero-stats {
     align-items: stretch;
   }
 
@@ -729,8 +698,7 @@ a {
   }
 
   .intro-layout,
-  .indicator-panel,
-  .split-layout {
+  .indicator-panel {
     grid-template-columns: 1fr;
   }
 
@@ -743,7 +711,7 @@ a {
 
 @media (max-width: 620px) {
   .hero h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 
   .metric-grid,
@@ -754,6 +722,11 @@ a {
 
   .button {
     width: 100%;
+  }
+
+  .affiliations {
+    gap: 10px;
+    font-size: 0.9rem;
   }
 
   .hero-actions {

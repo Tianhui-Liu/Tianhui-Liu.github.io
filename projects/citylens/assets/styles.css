@@ -158,7 +158,7 @@ a {
   margin: 0;
   width: 100%;
   max-width: 1280px;
-  font-size: 2.15rem;
+  font-size: 2.45rem;
   line-height: 1.16;
   letter-spacing: 0;
 }
@@ -180,7 +180,7 @@ a {
   max-width: 1280px;
   margin: 24px auto 0;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 0.98rem;
+  font-size: 1.08rem;
   font-weight: 760;
   line-height: 1.35;
   white-space: nowrap;
@@ -196,7 +196,7 @@ a {
   display: grid;
   gap: 6px;
   max-width: 1080px;
-  font-size: 1.02rem;
+  font-size: 1.12rem;
 }
 
 .affiliation-row {
@@ -205,7 +205,7 @@ a {
 }
 
 .corresponding-note {
-  font-size: 0.98rem;
+  font-size: 1.05rem;
 }
 
 .hero-actions {
@@ -297,7 +297,7 @@ a {
   font-size: 1.05rem;
 }
 
-.abstract-copy {
+.intro-layout .abstract-copy {
   margin: 16px 0 0;
   font-size: 1.16rem;
   line-height: 1.62;
@@ -442,6 +442,7 @@ a {
 
 .method-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 30px;
 }
 
 .method-card {

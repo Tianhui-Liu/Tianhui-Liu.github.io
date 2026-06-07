@@ -69,8 +69,7 @@ a {
 
 .brand,
 .nav-links,
-.hero-actions,
-.hero-stats {
+.hero-actions {
   display: flex;
   align-items: center;
 }
@@ -112,11 +111,11 @@ a {
 .hero {
   position: relative;
   display: flex;
-  min-height: 92svh;
+  min-height: 76svh;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 124px clamp(18px, 5vw, 72px) 56px;
+  padding: 112px clamp(18px, 5vw, 72px) 64px;
   color: var(--white);
   background:
     linear-gradient(135deg, rgba(11, 111, 104, 0.24), transparent 42%),
@@ -158,7 +157,7 @@ a {
   margin: 0;
   width: 100%;
   max-width: 1280px;
-  font-size: 1.62rem;
+  font-size: 2.15rem;
   line-height: 1.16;
   letter-spacing: 0;
 }
@@ -180,7 +179,7 @@ a {
   max-width: 1280px;
   margin: 24px auto 0;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 0.78rem;
+  font-size: 0.98rem;
   font-weight: 760;
   line-height: 1.35;
   white-space: nowrap;
@@ -195,8 +194,8 @@ a {
 .affiliations {
   display: grid;
   gap: 6px;
-  max-width: 940px;
-  font-size: 0.92rem;
+  max-width: 1080px;
+  font-size: 1.02rem;
 }
 
 .affiliation-row {
@@ -205,7 +204,7 @@ a {
 }
 
 .corresponding-note {
-  font-size: 0.9rem;
+  font-size: 0.98rem;
 }
 
 .hero-actions {
@@ -266,38 +265,6 @@ a {
   color: var(--teal);
 }
 
-.hero-stats {
-  position: relative;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  width: min(980px, 100%);
-  margin: 0;
-}
-
-.hero-stats div {
-  display: grid;
-  min-width: 136px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-}
-
-.hero-stats dt {
-  font-size: 2.08rem;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.hero-stats dd {
-  margin: 4px 0 0;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.9rem;
-  font-weight: 750;
-}
-
 .intro-band {
   border-bottom: 1px solid var(--line);
   background: var(--mist);
@@ -347,9 +314,18 @@ a {
   margin: 18px auto 0;
 }
 
+.benchmark-heading {
+  max-width: 1060px;
+}
+
+.benchmark-heading p {
+  max-width: 1060px;
+  font-size: 1.16rem;
+  line-height: 1.62;
+}
+
 .metric-grid,
-.method-grid,
-.finding-layout {
+.method-grid {
   display: grid;
   gap: 14px;
 }
@@ -359,8 +335,7 @@ a {
 }
 
 .metric-tile,
-.method-card,
-.finding {
+.method-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--white);
@@ -381,7 +356,6 @@ a {
 
 .metric-tile p,
 .method-card p,
-.finding p,
 .indicator-panel p,
 .citation {
   margin: 10px 0 0;
@@ -470,32 +444,10 @@ a {
   font-weight: 900;
 }
 
-.method-card h3,
-.finding h3 {
+.method-card h3 {
   margin: 18px 0 0;
   font-size: 1.32rem;
   line-height: 1.15;
-}
-
-.finding-layout {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.finding {
-  padding: 22px;
-  border-left: 5px solid var(--teal);
-}
-
-.finding:nth-child(2) {
-  border-left-color: var(--red);
-}
-
-.finding:nth-child(3) {
-  border-left-color: var(--green);
-}
-
-.finding:nth-child(4) {
-  border-left-color: var(--gold);
 }
 
 .poster-section {
@@ -684,34 +636,24 @@ a {
     padding-top: 106px;
   }
 
-  .hero-stats {
-    align-items: stretch;
-  }
-
-  .hero-stats div {
-    flex: 1 1 140px;
-  }
-
   .intro-layout,
   .indicator-panel {
     grid-template-columns: 1fr;
   }
 
   .metric-grid,
-  .method-grid,
-  .finding-layout {
+  .method-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 620px) {
   .hero-title {
-    font-size: 1.22rem;
+    font-size: 1.55rem;
   }
 
   .metric-grid,
-  .method-grid,
-  .finding-layout {
+  .method-grid {
     grid-template-columns: 1fr;
   }
 

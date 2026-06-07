@@ -22,7 +22,6 @@
         <a href="#methods">Methods</a>
         <a href="#poster">Poster</a>
         <a href="#results">Results</a>
-        <a href="#findings">Findings</a>
         <a href="#citation">Citation</a>
       </nav>
     </header>
@@ -54,24 +53,6 @@
               <a class="button button-secondary" href="#poster">Poster</a>
             </div>
           </div>
-          <dl class="hero-stats" aria-label="Benchmark scale">
-            <div>
-              <dt>17</dt>
-              <dd>Cities</dd>
-            </div>
-            <div>
-              <dt>11</dt>
-              <dd>Indicators</dd>
-            </div>
-            <div>
-              <dt>6</dt>
-              <dd>Domains</dd>
-            </div>
-            <div>
-              <dt>17</dt>
-              <dd>LVLMs</dd>
-            </div>
-          </dl>
         </div>
       </section>
 
@@ -101,7 +82,7 @@
       </section>
 
       <section id="benchmark" class="section">
-        <div class="section-heading">
+        <div class="section-heading benchmark-heading">
           <p class="section-label">Benchmark</p>
           <h2>CityLens benchmark overview</h2>
           <p>
@@ -251,52 +232,6 @@
           <div class="gallery-empty" data-gallery-empty hidden>
             Put the figures you want to browse into <code>assets/images/</code>, then add them to <code>assets/figures.js</code>.
           </div>
-        </div>
-      </section>
-
-      <section id="findings" class="section findings-section">
-        <div class="section-heading">
-          <p class="section-label">Findings</p>
-          <h2>What CityLens reveals about current LVLMs</h2>
-          <p>
-            Across 17 models, 11 tasks, and 3 evaluation paradigms, CityLens shows that current
-            LVLMs can extract useful urban signals, but their performance remains highly dependent
-            on indicator type, data coverage, and prediction strategy.
-          </p>
-        </div>
-
-        <div class="finding-layout">
-          <article class="finding">
-            <h3>Visually grounded indicators are easier to predict.</h3>
-            <p>
-              Building Height, Public Transport, and GDP achieve stronger performance because
-              their targets are more directly reflected in skyline structure, infrastructure visibility,
-              and urban morphology.
-            </p>
-          </article>
-          <article class="finding">
-            <h3>Latent social outcomes remain challenging.</h3>
-            <p>
-              Mental Health, Life Expectancy, and Bachelor Ratio remain difficult because they
-              depend on social and health processes that are only weakly observable from imagery.
-            </p>
-          </article>
-          <article class="finding">
-            <h3>Street view imagery carries the strongest predictive signal.</h3>
-            <p>
-              Street view imagery alone performs comparably to using both modalities and clearly
-              outperforms satellite-only input, while adding more street views consistently improves
-              prediction quality.
-            </p>
-          </article>
-          <article class="finding">
-            <h3>Performance varies across cities and paradigms.</h3>
-            <p>
-              Results differ substantially across cities, and no single evaluation paradigm is best
-              for every task. CityLens makes these geographic and methodological differences visible
-              instead of hiding them behind a single average score.
-            </p>
-          </article>
         </div>
       </section>
 

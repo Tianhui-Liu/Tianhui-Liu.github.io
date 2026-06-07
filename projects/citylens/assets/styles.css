@@ -148,7 +148,7 @@ a {
 .metric-tile span {
   margin: 0;
   color: var(--gold);
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   font-weight: 850;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -165,6 +165,24 @@ a {
 
 .hero-title-line {
   display: block;
+}
+
+.venue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 18px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  color: var(--white);
+  background: rgba(7, 21, 20, 0.62);
+  box-shadow: 0 12px 32px rgba(7, 21, 20, 0.22);
+  font-size: 0.98rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
 }
 
 .subtitle {
@@ -297,11 +315,6 @@ a {
   font-size: 1.05rem;
 }
 
-.intro-layout > .section-label,
-.benchmark-heading > .section-label {
-  font-size: 0.78rem;
-}
-
 .intro-layout p.abstract-copy {
   max-width: 1060px;
   margin: 16px 0 0;
@@ -333,6 +346,13 @@ a {
   max-width: 1060px;
   font-size: 1.16rem;
   line-height: 1.62;
+}
+
+.intro-layout > .section-label,
+.section-heading > .section-label {
+  color: var(--gold);
+  font-size: 1.16rem;
+  line-height: 1.2;
 }
 
 .methods-section .section-heading,
@@ -402,35 +422,43 @@ a {
 .indicator-panel {
   display: grid;
   grid-template-columns: minmax(220px, 0.7fr) minmax(280px, 1.3fr);
-  gap: clamp(22px, 4vw, 48px);
+  gap: clamp(18px, 3vw, 34px);
   margin-top: 30px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: clamp(22px, 4vw, 34px);
+  padding: clamp(16px, 2.5vw, 22px);
   background: linear-gradient(135deg, #ffffff 0%, #f4f0e8 100%);
 }
 
 .indicator-panel h3 {
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   font-size: 1.18rem;
-  line-height: 1.25;
+  line-height: 1.18;
 }
 
 .indicator-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   align-content: start;
 }
 
 .indicator-list span {
   border: 1px solid #d1d9d4;
   border-radius: var(--radius);
-  padding: 8px 10px;
+  padding: 6px 9px;
   color: var(--teal-dark);
   background: var(--white);
   font-size: 0.9rem;
   font-weight: 800;
+}
+
+.indicator-list .indicator-row-break {
+  flex-basis: 100%;
+  width: 0;
+  height: 0;
+  border: 0;
+  padding: 0;
 }
 
 .methods-section {
@@ -506,24 +534,35 @@ a {
 .gallery-stage {
   position: relative;
   display: grid;
-  min-height: 520px;
+  height: clamp(520px, 82vh, 860px);
   place-items: center;
+  overflow: hidden;
   background: #f8faf8;
 }
 
 .gallery-image-link {
   display: grid;
   width: 100%;
-  min-height: 520px;
+  height: 100%;
   place-items: center;
-  padding: clamp(14px, 3vw, 30px);
+  padding: clamp(22px, 4vw, 44px) clamp(58px, 6vw, 78px);
 }
 
 .gallery-image-link img {
   width: auto;
   max-width: 100%;
-  max-height: 72vh;
+  max-height: 100%;
   object-fit: contain;
+}
+
+.figure-gallery[data-gallery-fit="smaller"] .gallery-image-link img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.figure-gallery[data-gallery-fit="smallest"] .gallery-image-link img {
+  max-width: 75%;
+  max-height: 75%;
 }
 
 .gallery-arrow {
@@ -561,10 +600,32 @@ a {
 .gallery-meta {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 18px;
   border-top: 1px solid var(--line);
   padding: 16px;
+}
+
+.gallery-caption {
+  flex: 1 1 auto;
+  max-width: 1020px;
+}
+
+.gallery-caption p {
+  margin: 0;
+}
+
+.gallery-caption-title {
+  color: var(--ink);
+  font-size: 0.96rem;
+  font-weight: 850;
+}
+
+.gallery-caption [data-gallery-caption] {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.5;
 }
 
 .gallery-thumbs {
@@ -692,14 +753,21 @@ a {
     align-items: stretch;
   }
 
-  .gallery-stage,
+  .gallery-stage {
+    height: clamp(300px, 62vh, 440px);
+  }
+
   .gallery-image-link {
-    min-height: 340px;
+    padding: 18px 46px;
   }
 
   .gallery-meta {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .indicator-list .indicator-row-break {
+    display: none;
   }
 
   .gallery-arrow {

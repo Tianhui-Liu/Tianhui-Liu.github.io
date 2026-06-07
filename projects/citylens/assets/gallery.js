@@ -6,6 +6,8 @@ if (gallery) {
   const image = gallery.querySelector("[data-gallery-image]");
   const imageLink = gallery.querySelector("[data-gallery-link]");
   const openLink = gallery.querySelector("[data-gallery-open]");
+  const captionTitle = gallery.querySelector("[data-gallery-caption-title]");
+  const caption = gallery.querySelector("[data-gallery-caption]");
   const thumbs = gallery.querySelector("[data-gallery-thumbs]");
   const empty = gallery.querySelector("[data-gallery-empty]");
   const prev = gallery.querySelector("[data-gallery-prev]");
@@ -18,6 +20,8 @@ if (gallery) {
       imageLink.hidden = true;
       openLink.hidden = true;
       image.hidden = true;
+      captionTitle.textContent = "";
+      caption.textContent = "";
       prev.disabled = true;
       next.disabled = true;
       return;
@@ -33,6 +37,9 @@ if (gallery) {
     image.alt = figure.alt || figure.title;
     imageLink.href = figure.src;
     openLink.href = figure.src;
+    gallery.dataset.galleryFit = figure.fit || "default";
+    captionTitle.textContent = figure.title;
+    caption.textContent = figure.caption || "";
 
     thumbs.querySelectorAll(".gallery-thumb").forEach((button, thumbIndex) => {
       button.setAttribute("aria-current", String(thumbIndex === current));

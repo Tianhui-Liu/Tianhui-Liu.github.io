@@ -118,8 +118,8 @@ a {
   padding: 112px clamp(18px, 5vw, 72px) 64px;
   color: var(--white);
   background:
-    linear-gradient(90deg, rgba(7, 21, 20, 0.78), rgba(7, 21, 20, 0.5) 48%, rgba(7, 21, 20, 0.82)),
-    linear-gradient(180deg, rgba(7, 21, 20, 0.34), rgba(7, 21, 20, 0.78)),
+    linear-gradient(90deg, rgba(7, 21, 20, 0.45), rgba(7, 21, 20, 0.2) 48%, rgba(7, 21, 20, 0.55)),
+    linear-gradient(180deg, rgba(7, 21, 20, 0.18), rgba(7, 21, 20, 0.5)),
     url("./images/citylens-hero-bg.png") center / cover no-repeat,
     var(--night);
 }

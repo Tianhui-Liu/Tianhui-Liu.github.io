@@ -297,7 +297,13 @@ a {
   font-size: 1.05rem;
 }
 
-.intro-layout .abstract-copy {
+.intro-layout > .section-label,
+.benchmark-heading > .section-label {
+  font-size: 0.78rem;
+}
+
+.intro-layout p.abstract-copy {
+  max-width: 1060px;
   margin: 16px 0 0;
   font-size: 1.16rem;
   line-height: 1.62;

@@ -129,13 +129,13 @@ a {
   z-index: 1;
   display: grid;
   gap: 30px;
-  width: min(1100px, 100%);
+  width: min(1280px, 100%);
   margin: 0 auto;
   justify-items: center;
 }
 
 .hero-content {
-  width: min(1040px, 100%);
+  width: min(1280px, 100%);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -157,8 +157,8 @@ a {
 .hero-title {
   margin: 0;
   width: 100%;
-  max-width: 1120px;
-  font-size: clamp(1.4rem, 2.35vw, 2.1rem);
+  max-width: 1280px;
+  font-size: 1.62rem;
   line-height: 1.16;
   letter-spacing: 0;
 }
@@ -177,10 +177,10 @@ a {
 
 .authors {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1280px;
   margin: 24px auto 0;
   color: rgba(255, 255, 255, 0.88);
-  font-size: clamp(0.78rem, 1.15vw, 0.92rem);
+  font-size: 0.78rem;
   font-weight: 760;
   line-height: 1.35;
   white-space: nowrap;
@@ -597,27 +597,6 @@ a {
   padding: 16px;
 }
 
-.gallery-meta > div {
-  display: none;
-}
-
-.gallery-meta h3,
-.gallery-count {
-  margin: 0;
-}
-
-.gallery-meta h3 {
-  font-size: 1.18rem;
-}
-
-.gallery-count {
-  color: var(--gold);
-  font-size: 0.78rem;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
 .gallery-thumbs {
   display: flex;
   gap: 10px;
@@ -727,7 +706,7 @@ a {
 
 @media (max-width: 620px) {
   .hero-title {
-    font-size: 1.36rem;
+    font-size: 1.22rem;
   }
 
   .metric-grid,

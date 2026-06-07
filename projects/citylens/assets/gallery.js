@@ -6,8 +6,6 @@ if (gallery) {
   const image = gallery.querySelector("[data-gallery-image]");
   const imageLink = gallery.querySelector("[data-gallery-link]");
   const openLink = gallery.querySelector("[data-gallery-open]");
-  const title = gallery.querySelector("[data-gallery-title]");
-  const count = gallery.querySelector("[data-gallery-count]");
   const thumbs = gallery.querySelector("[data-gallery-thumbs]");
   const empty = gallery.querySelector("[data-gallery-empty]");
   const prev = gallery.querySelector("[data-gallery-prev]");
@@ -20,8 +18,6 @@ if (gallery) {
       imageLink.hidden = true;
       openLink.hidden = true;
       image.hidden = true;
-      count.textContent = "0 / 0";
-      title.textContent = "No figures added yet";
       prev.disabled = true;
       next.disabled = true;
       return;
@@ -37,8 +33,6 @@ if (gallery) {
     image.alt = figure.alt || figure.title;
     imageLink.href = figure.src;
     openLink.href = figure.src;
-    title.textContent = figure.title;
-    count.textContent = `${current + 1} / ${figures.length}`;
 
     thumbs.querySelectorAll(".gallery-thumb").forEach((button, thumbIndex) => {
       button.setAttribute("aria-current", String(thumbIndex === current));

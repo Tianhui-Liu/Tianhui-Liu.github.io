@@ -40,7 +40,7 @@ Please refer to [Google scholar](https://scholar.google.com/citations?user=xNqF7
 
 **Tianhui Liu**, Hetian Pang, Xin Zhang, Tianjian Ouyang, Zhiyuan Zhang, Jie Feng, Yong Li, Pan Hui
 
-[**Codes**](https://github.com/tsinghua-fib-lab/CityLens) / [**PDF**](https://arxiv.org/abs/2506.00530)
+[**Codes**](https://github.com/tsinghua-fib-lab/CityLens) / [**PDF**](https://arxiv.org/abs/2506.00530) / [**Project Website**](https://tianhui-liu.github.io/projects/CityLens/)
 
 </div>
 </div>
@@ -66,9 +66,9 @@ Jie Feng\*, Jun Zhang\*, **Tianhui Liu\***, Xin Zhang, Tianjian Ouyang, Junbo Ya
 
 **CityGPT: Empowering Urban Spatial Cognition of Large Language Models**
 
-Jie Feng*, **Tianhui Liu\***, Yuwei Du, Siqi Guo, Yuming Lin, Yong Li
+Jie Feng\*, **Tianhui Liu\***, Yuwei Du, Siqi Guo, Yuming Lin, Yong Li
 
-[**Codes**](https://github.com/tsinghua-fib-lab/CityGPT) / [**PDF**](https://arxiv.org/abs/2406.13948)
+[**Codes**](https://github.com/tsinghua-fib-lab/CityGPT) / [**PDF**](https://arxiv.org/abs/2406.13948) / [**Project Website**](https://vonfeng.github.io/projects/CityGPT/)
 
 </div>
 </div>

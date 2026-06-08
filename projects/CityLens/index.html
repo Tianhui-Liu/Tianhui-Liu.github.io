@@ -76,8 +76,7 @@
             demonstrate promising perceptual and reasoning capabilities, they still exhibit
             limitations in predicting urban socioeconomic indicators. CityLens provides a unified
             framework for diagnosing these limitations and guiding future efforts in using LVLMs
-            to understand and predict urban socioeconomic patterns. The code and data are
-            available online.
+            to understand and predict urban socioeconomic patterns.
           </p>
         </div>
       </section>
@@ -101,7 +100,7 @@
             <p>Including cities across North America, Europe, Asia, Africa, South America, and Oceania.</p>
           </article>
           <article class="metric-tile">
-            <span>Signals</span>
+            <span>Domains</span>
             <strong>6 domains</strong>
             <p>Economy, education, crime, transport, health, and environment.</p>
           </article>
@@ -123,6 +122,30 @@
           </a>
           <figcaption>CityLens framework: region-level visual inputs, socioeconomic prediction tasks, and benchmark scale.</figcaption>
         </figure>
+
+        <div class="paper-callout">
+          <figure class="content-figure paper-figure">
+            <a href="./assets/images/bar_image/figure3.png" aria-label="Open CityLens dataset statistics figure">
+              <img src="./assets/images/bar_image/figure3.png" alt="CityLens selected indicators and dataset statistics" />
+            </a>
+            <figcaption>Selected socioeconomic indicators and dataset statistics.</figcaption>
+          </figure>
+          <div class="paper-copy">
+            <h3>Dataset construction and task selection</h3>
+            <p>
+              From 28 collected socioeconomic indicators, CityLens selects 11 prediction tasks by
+              checking whether each indicator has plausible visual relevance and by removing
+              redundancy among semantically similar indicators. Each region is paired with one
+              satellite image, ten street view images, and scalar labels mapped from heterogeneous
+              geographic sources.
+            </p>
+            <p>
+              The final benchmark spans global satellite-area tasks, U.S. census tract tasks, and
+              U.K. MSOA tasks, with up to 500 cases for country-specific indicators and up to
+              1000 cases for globally available indicators.
+            </p>
+          </div>
+        </div>
 
         <div class="indicator-panel">
           <div>
@@ -151,7 +174,7 @@
         <div class="section-heading">
           <p class="section-label">Evaluation Paradigms</p>
           <!-- <h2>Three evaluation paradigms for socioeconomic prediction</h2> -->
-          <p>
+          <p class="methods-copy">
             CityLens evaluates direct numeric prediction, normalized score estimation, and
             feature-based regression so that perceptual grounding, relative ranking, and numeric
             calibration can be compared under a unified benchmark.
@@ -165,60 +188,48 @@
           <figcaption>Benchmark construction pipeline: data collection, indicator selection, spatial mapping, and evaluation methods.</figcaption>
         </figure>
 
-        <div class="method-grid">
-          <article class="method-card">
-            <span class="method-index">01</span>
-            <h3>Direct Metric Prediction</h3>
-            <p>
-              The model receives urban imagery and directly outputs a specific socioeconomic value,
-              such as the public transit ratio or average house price for a region.
-            </p>
-          </article>
-          <article class="method-card">
-            <span class="method-index">02</span>
-            <h3>Normalized Metric Estimation</h3>
-            <p>
-              The target is converted to a 0.0 to 9.9 scale, emphasizing relative ordering and
-              reducing the burden of absolute value calibration.
-            </p>
-          </article>
-          <article class="method-card">
-            <span class="method-index">03</span>
-            <h3>Feature-Based Regression</h3>
-            <p>
-              LVLMs score structured visual features, then a regression model maps those features to
-              socioeconomic indicators, turning the LVLM into a visual feature enhancer.
-            </p>
-          </article>
+        <div class="paper-callout paper-callout-reverse methods-callout">
+          <figure class="content-figure paper-figure">
+            <a href="./assets/images/bar_image/figure4.png" aria-label="Open CityLens prompt examples figure">
+              <img src="./assets/images/bar_image/figure4.png" alt="CityLens prompt examples for three evaluation methodologies" />
+            </a>
+            <figcaption>Prompt examples for the three evaluation methodologies.</figcaption>
+          </figure>
+          <div class="paper-copy">
+            <h3>Three ways to evaluate LVLMs</h3>
+            <div class="method-mini-grid">
+              <article class="method-mini-card">
+                <span class="method-index">01</span>
+                <h4>Direct Metric Prediction</h4>
+                <p>The model receives urban imagery and directly outputs a socioeconomic value.</p>
+              </article>
+              <article class="method-mini-card">
+                <span class="method-index">02</span>
+                <h4>Normalized Metric Estimation</h4>
+                <p>The target is converted to a 0.0-9.9 scale to emphasize relative ranking.</p>
+              </article>
+              <article class="method-mini-card">
+                <span class="method-index">03</span>
+                <h4>Feature-Based Regression</h4>
+                <p>LVLM-scored visual attributes are mapped to labels with a LASSO regressor.</p>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="results" class="section figures-section">
         <div class="section-heading">
           <p class="section-label">Results</p>
-          <!-- <h2>Selected result figures from the paper</h2>
-          <p>
-            Browse the main result figures, including task-level comparisons, modality ablations,
-            city-level variation, and representative qualitative cases.
+          <!-- <p>
+            Browse the main findings by section. Each module pairs the relevant result images
+            with a short interpretation.
           </p> -->
         </div>
-        <div class="figure-gallery" data-gallery tabindex="0">
-          <div class="gallery-stage">
-            <button class="gallery-arrow" type="button" data-gallery-prev aria-label="Previous figure">&#8249;</button>
-            <a class="gallery-image-link" data-gallery-link href="#results" hidden>
-              <img data-gallery-image alt="CityLens figure" />
-            </a>
-            <button class="gallery-arrow" type="button" data-gallery-next aria-label="Next figure">&#8250;</button>
-          </div>
-          <div class="gallery-meta">
-            <div class="gallery-caption" aria-live="polite">
-              <p class="gallery-caption-title" data-gallery-caption-title></p>
-              <p data-gallery-caption></p>
-            </div>
-            <a class="button button-light" data-gallery-open href="#results" hidden>Open Figure</a>
-          </div>
-          <div class="gallery-thumbs" data-gallery-thumbs aria-label="Figure thumbnails"></div>
-          <div class="gallery-empty" data-gallery-empty hidden>
+        <div class="results-board" data-results>
+          <div class="results-tabs" data-results-tabs role="tablist" aria-label="Result modules"></div>
+          <div class="results-list" data-results-list></div>
+          <div class="gallery-empty" data-results-empty hidden>
             Put the figures you want to browse into <code>assets/images/</code>, then add them to <code>assets/figures.js</code>.
           </div>
         </div>
@@ -252,12 +263,15 @@
             Urban Socioeconomic Sensing.</em> International Conference on Learning Representations, 2026.
           </p>
         </div>
-        <pre class="bibtex"><code>@inproceedings{liu2026citylens,
+        <div class="bibtex-panel">
+          <button class="button button-light citation-copy" type="button" data-copy-citation>Copy Citation</button>
+          <pre class="bibtex"><code data-citation-code>@inproceedings{liu2026citylens,
   title={CityLens: Evaluating Large Vision-Language Models for Urban Socioeconomic Sensing},
   author={Liu, Tianhui and Pang, Hetian and Zhang, Xin and Ouyang, Tianjian and Zhang, Zhiyuan and Feng, Jie and Li, Yong and Hui, Pan},
   booktitle={International Conference on Learning Representations},
   year={2026}
 }</code></pre>
+        </div>
       </section>
     </main>
     <script type="module" src="./assets/gallery.js"></script>

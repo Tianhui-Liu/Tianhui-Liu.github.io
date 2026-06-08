@@ -1,82 +1,110 @@
-import { figures } from "./figures.js";
+import { resultSections } from "./figures.js";
 
-const gallery = document.querySelector("[data-gallery]");
+const results = document.querySelector("[data-results]");
 
-if (gallery) {
-  const image = gallery.querySelector("[data-gallery-image]");
-  const imageLink = gallery.querySelector("[data-gallery-link]");
-  const openLink = gallery.querySelector("[data-gallery-open]");
-  const captionTitle = gallery.querySelector("[data-gallery-caption-title]");
-  const caption = gallery.querySelector("[data-gallery-caption]");
-  const thumbs = gallery.querySelector("[data-gallery-thumbs]");
-  const empty = gallery.querySelector("[data-gallery-empty]");
-  const prev = gallery.querySelector("[data-gallery-prev]");
-  const next = gallery.querySelector("[data-gallery-next]");
-  let current = 0;
+if (results) {
+  const tabs = results.querySelector("[data-results-tabs]");
+  const list = results.querySelector("[data-results-list]");
+  const empty = results.querySelector("[data-results-empty]");
+  let currentSection = 0;
 
-  const setFigure = (index) => {
-    if (!figures.length) {
-      empty.hidden = false;
-      imageLink.hidden = true;
-      openLink.hidden = true;
-      image.hidden = true;
-      captionTitle.textContent = "";
-      caption.textContent = "";
-      prev.disabled = true;
-      next.disabled = true;
-      return;
-    }
+  const buildFigure = (figure) => {
+    const item = document.createElement("figure");
+    item.className = `result-figure${figure.fit ? ` result-figure-${figure.fit}` : ""}`;
 
-    empty.hidden = true;
-    imageLink.hidden = false;
-    openLink.hidden = false;
-    image.hidden = false;
-    current = (index + figures.length) % figures.length;
-    const figure = figures[current];
+    const media = document.createElement("div");
+    media.className = "result-figure-media";
+
+    const link = document.createElement("a");
+    link.className = "result-image-link";
+    link.href = figure.src;
+    link.setAttribute("aria-label", "Open result image");
+
+    const image = document.createElement("img");
     image.src = figure.src;
-    image.alt = figure.alt || figure.title;
-    imageLink.href = figure.src;
-    openLink.href = figure.src;
-    gallery.dataset.galleryFit = figure.fit || "default";
-    captionTitle.textContent = figure.title;
+    image.alt = figure.alt || figure.caption;
+    image.loading = "lazy";
+
+    const caption = document.createElement("figcaption");
     caption.textContent = figure.caption || "";
 
-    thumbs.querySelectorAll(".gallery-thumb").forEach((button, thumbIndex) => {
-      button.setAttribute("aria-current", String(thumbIndex === current));
+    link.append(image);
+    media.append(link, caption);
+    item.append(media);
+    return item;
+  };
+
+  const buildSection = (section) => {
+    const item = document.createElement("article");
+    item.className = `result-module result-module-${section.id}`;
+
+    const copy = document.createElement("div");
+    copy.className = "result-module-copy";
+
+    const heading = document.createElement("h3");
+    heading.textContent = section.heading;
+
+    const text = document.createElement("p");
+    text.textContent = section.text;
+
+    const figures = document.createElement("div");
+    figures.className = `result-figure-grid${section.figures.length > 1 ? " result-figure-grid-multiple" : ""}`;
+    figures.append(...section.figures.map(buildFigure));
+
+    copy.append(heading, text);
+    item.append(copy, figures);
+    return item;
+  };
+
+  const renderSection = (index) => {
+    currentSection = index;
+    list.replaceChildren(buildSection(resultSections[currentSection]));
+
+    tabs.querySelectorAll(".results-tab").forEach((button, tabIndex) => {
+      button.setAttribute("aria-selected", String(tabIndex === currentSection));
     });
   };
 
-  const buildThumbs = () => {
-    thumbs.replaceChildren();
-    figures.forEach((figure, index) => {
+  const buildTabs = () => {
+    tabs.replaceChildren();
+
+    resultSections.forEach((section, index) => {
       const button = document.createElement("button");
-      button.className = "gallery-thumb";
+      button.className = "results-tab";
       button.type = "button";
-      button.setAttribute("aria-label", `Show ${figure.title}`);
-
-      const thumb = document.createElement("img");
-      thumb.src = figure.src;
-      thumb.alt = "";
-      thumb.loading = "lazy";
-
-      button.append(thumb);
-      button.addEventListener("click", () => setFigure(index));
-      thumbs.append(button);
+      button.textContent = section.label;
+      button.setAttribute("role", "tab");
+      button.setAttribute("aria-selected", "false");
+      button.addEventListener("click", () => renderSection(index));
+      tabs.append(button);
     });
   };
 
-  prev.addEventListener("click", () => setFigure(current - 1));
-  next.addEventListener("click", () => setFigure(current + 1));
+  if (!resultSections.length) {
+    empty.hidden = false;
+  } else {
+    empty.hidden = true;
+    buildTabs();
+    renderSection(0);
+  }
+}
 
-  gallery.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft") {
-      setFigure(current - 1);
+const copyCitation = document.querySelector("[data-copy-citation]");
+const citationCode = document.querySelector("[data-citation-code]");
+
+if (copyCitation && citationCode) {
+  copyCitation.addEventListener("click", async () => {
+    const originalText = copyCitation.textContent;
+
+    try {
+      await navigator.clipboard.writeText(citationCode.textContent.trim());
+      copyCitation.textContent = "Copied";
+    } catch {
+      copyCitation.textContent = "Copy failed";
     }
-    if (event.key === "ArrowRight") {
-      setFigure(current + 1);
-    }
+
+    window.setTimeout(() => {
+      copyCitation.textContent = originalText;
+    }, 1800);
   });
-
-  buildThumbs();
-  setFigure(0);
 }
